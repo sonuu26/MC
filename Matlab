@@ -1,5 +1,5 @@
 clear 
-N = 10^6 % number of bits or symbols 
+N = 10^6
 rand('state',100);
 randn('state',200);
 ip = rand(1,N)>0.5;
