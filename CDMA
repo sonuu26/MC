@@ -17,13 +17,13 @@ resultant_channel=r1+r2+r3+r4;
 print("Resultant Channel",resultant_channel) 
 Channel=int(input("Enter the station to listen for C1=1 ,C2=2, C3=3 C4=4 : ")) 
 if Channel==1: 
-rc=c1 
+  rc=c1 
 elif Channel==2: 
-rc=c2 
+  rc=c2 
 elif Channel==3: 
-rc=c3 
+  rc=c3 
 elif Channel==4: 
-rc=c4
+  rc=c4
 inner_product=np.multiply(resultant_channel,rc) 
 print("Inner Product",inner_product) 
 res1=sum(inner_product) 
