@@ -1,0 +1,39 @@
+CODE----- to run in colab
+
+import socket
+
+# create a TCP/IP socket
+server_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+
+# bind the socket to a specific IP address and port
+server_address = ('localhost', 8000)
+server_socket.bind(server_address)
+
+# listen for incoming connections
+server_socket.listen(1)
+print('Server is listening on {}:{}'.format(*server_address))
+
+while True:
+    # wait for a client connection
+    print('Waiting for a client connection...')
+    client_socket, client_address = server_socket.accept()
+    print('Client connected from {}:{}'.format(*client_address))
+    
+    # receive data from the client
+    data = client_socket.recv(1024)
+    print('Received data: {!r}'.format(data))
+    
+    # send a response back to the client
+    message = 'Hello, client!'
+    client_socket.sendall(message.encode('utf-8'))
+    print('Sent response: {!r}'.format(message))
+    
+    # close the connection with the client
+    client_socket.close()
+
+**************************************************************************************
+RUN THE CODE---
+To run this program in a Colab notebook, you can simply copy and paste the code into a code cell and run the cell. The program will start running and listening for incoming connections on port 8000. You can then connect to the server using a client program that sends data to the server and receives the response. To do this, you can use the telnet command in a separate Colab notebook cell:
+
+
+!telnet localhost 8000
