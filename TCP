@@ -33,7 +33,10 @@ while True:
 
 **************************************************************************************
 RUN THE CODE---
-To run this program in a Colab notebook, you can simply copy and paste the code into a code cell and run the cell. The program will start running and listening for incoming connections on port 8000. You can then connect to the server using a client program that sends data to the server and receives the response. To do this, you can use the telnet command in a separate Colab notebook cell:
+To run this program in a Colab notebook, you can simply copy and paste the code into a code cell and run the cell.
+The program will start running and listening for incoming connections on port 8000. 
+You can then connect to the server using a client program that sends data to the server and receives the response. 
+To do this, you can use the telnet command in a separate Colab notebook cell:
 
 
 !telnet localhost 8000
